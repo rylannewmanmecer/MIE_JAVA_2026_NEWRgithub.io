@@ -1,19 +1,352 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>My Portfolio</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Portfolio Website</title>
+
+<style>
+
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+  background:#0d1117;
+  color:#fff;
+}
+
+
+header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:20px 10%;
+  background:#161b22;
+}
+
+.logo{
+  font-size:24px;
+  font-weight:bold;
+  color:#58a6ff;
+  text-decoration:none;
+}
+
+nav a{
+  margin-left:20px;
+  text-decoration:none;
+  color:#fff;
+  transition:.3s;
+}
+
+nav a:hover,
+nav a.active{
+  color:#58a6ff;
+}
+
+
+.home{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:50px;
+  padding:60px 10%;
+  flex-wrap:wrap;
+}
+
+.home-img img{
+  width:280px;
+  border-radius:50%;
+  border:4px solid #58a6ff;
+}
+
+.home-content h1{
+  font-size:40px;
+  margin-bottom:10px;
+}
+
+.home-content span{
+  color:#58a6ff;
+}
+
+.home-content h3{
+  margin-bottom:15px;
+}
+
+.home-content p{
+  max-width:500px;
+  line-height:1.6;
+  margin-bottom:20px;
+}
+
+.social-icons {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/* link styling */
+.social-icons a {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #fff;
+  text-decoration: none; /* removes underline */
+  font-size: 15px;
+  transition: .3s;
+}
+
+/* icon size */
+.social-icons i {
+  font-size: 18px;
+}
+
+/* hover effect */
+.social-icons a:hover {
+  color: #58a6ff;
+}
+
+/* BUTTON */
+.btn{
+  display:inline-block;
+  margin-top:20px;
+  padding:10px 25px;
+  background:#58a6ff;
+  color:#fff;
+  text-decoration:none;
+  border-radius:6px;
+  transition:.3s;
+}
+
+.btn:hover{
+  background:#1f6feb;
+
+}
+
+
+.skills-section{
+  text-align:center;
+  padding:60px 10%;
+}
+.footer {
+    background-color: #0d1117;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.skills-section h2{
+  font-size:32px;
+  margin-bottom:25px;
+}
+
+.cells{
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:15px;
+}
+
+.cell{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  padding:10px 18px;
+  background:#161b22;
+  border:1px solid #30363d;
+  border-radius:8px;
+  transition:.3s;
+}
+
+.cell img{
+  width:24px;
+}
+
+.cell:hover{
+  border-color:#21a2bb;
+  transform:translateY(-3px);
+}
+
+/* ========= CONTACT ========= */
+.contact-section{
+  display:flex;
+  justify-content:center;
+  padding:60px 10%;
+}
+
+.contact-section form{
+  width:340px;
+  background:#161b22;
+  border:1px solid #30363d;
+  padding:25px;
+  border-radius:10px;
+}
+
+fieldset{
+  border:none;
+}
+
+legend{
+  font-weight:bold;
+  margin-bottom:10px;
+}
+
+label{
+  font-size:14px;
+  color:#c9d1d9;
+}
+
+input, textarea{
+  width:100%;
+  margin-top:5px;
+  margin-bottom:15px;
+  padding:8px;
+  border-radius:5px;
+  border:1px solid #30363d;
+  background:#0d1117;
+  color:#fff;
+}
+
+input[type="submit"]{
+  background:#58a6ff;
+  border:none;
+  cursor:pointer;
+  transition:.3s;
+}
+
+input[type="submit"]:hover{
+  background:#1f6feb;
+}
+
+/* CONTACT INFO */
+.contact-info{
+  margin-top:15px;
+}
+
+.contact-item{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  margin-bottom:8px;
+  color:#c9d1d9;
+}
+
+.contact-item img{
+  width:20px;
+}
+
+@media(max-width:768px){
+
+  .home{
+    text-align:center;
+  }
+
+  nav{
+    display:none;
+  }
+
+}
+
+</style>
 </head>
+
 <body>
 
-<h1>Hello World</h1>
-<p>This site is hosted by github</p>
+<header>
+  <a href="#" class="logo">Rylan Newman</a>
 
-<ul>
-<li>One</li>
-<li>Two</li>
-<li>Three</li>
-</ul>
+  <div class="social-icons">
+
+  <a href="https://www.linkedin.com/in/rylan-newman-55a857331/" target="_blank">
+    <i class="fa-brands fa-linkedin"></i>
+    <span>LinkedIn</span>
+  </a>
+
+  <a href="https://github.com/dashboard" target="_blank">
+    <i class="fa-brands fa-github"></i>
+    <span>GitHub</span>
+  </a>
+
+</div>
+  <nav>
+    <a href="#home" class="active">Home</a>
+    <a href="#cv">CV</a>
+    <a href="#work">My Work</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<section class="home">
+  <div class="home-img">
+    <img src="https://th.bing.com/th/id/R.594f7b5459efeb74ca48a708ea61b9db?rik=recSh1MbGDbjAQ&pid=ImgRaw&r=0">
+  </div>
+
+  <div class="home-content">
+    <h1>Hi, It's <span>Rylan</span></h1>
+    <p>I am a software developer specializing in building reliable, scalable, and user-focused digital solutions.
+ With experience across modern web technologies, I design and develop clean, efficient code that powers intuitive applications and seamless user experiences.
+I am passionate about continuous learning, problem-solving, and collaborating with teams to turn complex ideas into practical, high-quality products.</p>
+
+ 
+    <a href="#contact" class="btn">Contact me</a>
+  </div>
+</section>
+
+<section class="skills-section">
+  <h2>Skills</h2>
+  <div class="cells">
+    <div class="cell"><img src="https://cdn-icons-png.flaticon.com/512/732/732212.png">HTML</div>
+    <div class="cell"><img src="https://cdn-icons-png.flaticon.com/512/732/732190.png">CSS</div>
+    <div class="cell"><img src="https://cdn-icons-png.flaticon.com/512/5968/5968292.png">JavaScript</div>
+    <div class="cell"><img src="https://cdn-icons-png.flaticon.com/512/919/919825.png">Node.js</div>
+    <div class="cell"><img src="https://cdn-icons-png.flaticon.com/512/919/919851.png">React.js</div>
+  </div>
+</section>
+
+<section id="contact" class="contact-section">
+<form>
+<fieldset>
+<legend>Contact Me</legend>
+
+<label>Full Name</label>
+<input type="text" required>
+
+<label for="email">Email Address:</label><br>
+<input type="text" id="email" name="email" required ><br><br>
+
+<label>Message</label>
+<textarea rows="3"></textarea>
+
+<input type="submit" value="Submit">
+
+<div class="contact-info">
+  <div class="contact-item"><img src="https://tse3.mm.bing.net/th/id/OIP.TwESrblIhpd2D8XG5VDz5QHaHa?rs=1&pid=ImgDetMain&o=7&rm=3">0662288480</div>
+
+<div class="contact-item">
+  <img src="https://th.bing.com/th/id/OIP.rh-9ZKeTeRAjznl0dQD3CQHaHa?o=7rm=3&rs=1&pid=ImgDetMain&o=7&rm=3">
+  <a href="https://mail.google.com/mail/?view=cm&fs=1&to=rylannewman10@gmail.com" target="_blank">
+    rylannewman10@gmail.com
+  </a>
+</div>
+  <div class="contact-item"><img src="https://tse4.mm.bing.net/th/id/OIP.1xIAvsp5zAlU3NOGQvkXVQHaIh?rs=1&pid=ImgDetMain&o=7&rm=3">South Africa, JHB</div>
+  <div class="contact-item"><img src="https://tse2.mm.bing.net/th/id/OIP.MOGHvXqwkt3PlNqkAumxXAAAAA?rs=1&pid=ImgDetMain&o=7&rm=3">+27 66 228 8480</div>
+</div>
+
+
+</fieldset>
+</form>
+
+</section>
+
+
+<div class="footer">
+    © 2026 WebPortfolio
+</div>
+
 </body>
 </html>
