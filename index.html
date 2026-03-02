@@ -66,7 +66,10 @@ body{
     display: flex;
   }
 }
-
+.home {
+  max-width: 1200px;
+  margin: 0 auto;
+}
 .social-icons {
   display: flex;
   align-items: center;
@@ -141,8 +144,7 @@ nav a.active{
 
   .home {
     flex-direction: column;
-    gap: 25px;
-    padding: 20px;
+    text-align: center;
   }
 
   .home-content h1 {
@@ -150,7 +152,8 @@ nav a.active{
   }
 
   .home-img img {
-    max-width: 220px;
+    width: 220px;
+    height: 220px;
   }
 }
 
@@ -372,7 +375,11 @@ input[type="submit"]:hover{
       <h1>Hi, It's <span>Rylan</span></h1>
       <p>I am a software developer specializing in building reliable, scalable, and user-focused digital solutions...</p>
       <a href="#" onclick="showPage('contact', document.querySelectorAll('.nav-link')[3])" class="btn">Contact me</a>
-      <section class="skills-section">
+     
+    </div>
+  </div>
+</section>
+ <section class="skills-section">
   <h2>Skills</h2>
   <div class="cells">
     <div class="cell"><img src="images.html-5.png">HTML</div>
@@ -380,9 +387,6 @@ input[type="submit"]:hover{
     <div class="cell"><img src="images/js.jpg">JavaScript</div>
     <div class="cell"><img src="images/node.webp">Node.js</div>
     <div class="cell"><img src="images/reactlogo.webp">React.js</div>
-  </div>
-</section>
-    </div>
   </div>
 </section>
 
