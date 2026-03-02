@@ -269,92 +269,104 @@ input[type="submit"]:hover{
   <a href="#" class="logo">Rylan Newman</a>
 
   <div class="social-icons">
+    <a href="https://www.linkedin.com/in/rylan-newman-55a857331/" target="_blank">
+      LinkedIn
+    </a>
+    <a href="https://github.com/dashboard" target="_blank">
+      GitHub
+    </a>
+  </div>
 
-  <a href="https://www.linkedin.com/in/rylan-newman-55a857331/" target="_blank">
-    <i class="fa-brands fa-linkedin"></i>
-    <span>LinkedIn</span>
-  </a>
-
-  <a href="https://github.com/dashboard" target="_blank">
-    <i class="fa-brands fa-github"></i>
-    <span>GitHub</span>
-  </a>
-
-</div>
   <nav>
-    <a href="#home" class="active">Home</a>
-    <a href="#cv">CV</a>
-    <a href="#work">My Work</a>
-    <a href="#contact">Contact</a>
+    <a href="#" class="nav-link active" onclick="showPage('home', this)">Home</a>
+    <a href="#" class="nav-link" onclick="showPage('cv', this)">CV</a>
+    <a href="#" class="nav-link" onclick="showPage('work', this)">My Work</a>
+    <a href="#" class="nav-link" onclick="showPage('contact', this)">Contact</a>
   </nav>
 </header>
 
-<section class="home">
-  <div class="home-img">
-    <img src="https://th.bing.com/th/id/R.594f7b5459efeb74ca48a708ea61b9db?rik=recSh1MbGDbjAQ&pid=ImgRaw&r=0">
-  </div>
+<!-- HOME PAGE -->
+<section id="home" class="page active">
+  <div class="home">
+    <div class="home-img">
+      <img src="https://th.bing.com/th/id/R.594f7b5459efeb74ca48a708ea61b9db?rik=recSh1MbGDbjAQ&pid=ImgRaw&r=0">
+    </div>
 
-  <div class="home-content">
-    <h1>Hi, It's <span>Rylan</span></h1>
-    <p>I am a software developer specializing in building reliable, scalable, and user-focused digital solutions.
- With experience across modern web technologies, I design and develop clean, efficient code that powers intuitive applications and seamless user experiences.
-I am passionate about continuous learning, problem-solving, and collaborating with teams to turn complex ideas into practical, high-quality products.</p>
-
- 
-    <a href="#contact" class="btn">Contact me</a>
-  </div>
-</section>
-
-<section class="skills-section">
-  <h2>Skills</h2>
-  <div class="cells">
-    <div class="cell"><img src="https://cdn-icons-png.flaticon.com/512/732/732212.png">HTML</div>
-    <div class="cell"><img src="https://cdn-icons-png.flaticon.com/512/732/732190.png">CSS</div>
-    <div class="cell"><img src="https://cdn-icons-png.flaticon.com/512/5968/5968292.png">JavaScript</div>
-    <div class="cell"><img src="https://cdn-icons-png.flaticon.com/512/919/919825.png">Node.js</div>
-    <div class="cell"><img src="https://cdn-icons-png.flaticon.com/512/919/919851.png">React.js</div>
+    <div class="home-content">
+      <h1>Hi, It's <span>Rylan</span></h1>
+      <p>I am a software developer specializing in building reliable, scalable, and user-focused digital solutions...</p>
+      <a href="#" onclick="showPage('contact', document.querySelectorAll('.nav-link')[3])" class="btn">Contact me</a>
+    </div>
   </div>
 </section>
 
-<section id="contact" class="contact-section">
-<form>
-<fieldset>
-<legend>Contact Me</legend>
-
-<label>Full Name</label>
-<input type="text" required>
-
-<label for="email">Email Address:</label><br>
-<input type="text" id="email" name="email" required ><br><br>
-
-<label>Message</label>
-<textarea rows="3"></textarea>
-
-<input type="submit" value="Submit">
-
-<div class="contact-info">
-  <div class="contact-item"><img src="https://tse3.mm.bing.net/th/id/OIP.TwESrblIhpd2D8XG5VDz5QHaHa?rs=1&pid=ImgDetMain&o=7&rm=3">0662288480</div>
-
-<div class="contact-item">
-  <img src="https://th.bing.com/th/id/OIP.rh-9ZKeTeRAjznl0dQD3CQHaHa?o=7rm=3&rs=1&pid=ImgDetMain&o=7&rm=3">
-  <a href="https://mail.google.com/mail/?view=cm&fs=1&to=rylannewman10@gmail.com" target="_blank">
-    rylannewman10@gmail.com
-  </a>
-</div>
-  <div class="contact-item"><img src="https://tse4.mm.bing.net/th/id/OIP.1xIAvsp5zAlU3NOGQvkXVQHaIh?rs=1&pid=ImgDetMain&o=7&rm=3">South Africa, JHB</div>
-  <div class="contact-item"><img src="https://tse2.mm.bing.net/th/id/OIP.MOGHvXqwkt3PlNqkAumxXAAAAA?rs=1&pid=ImgDetMain&o=7&rm=3">+27 66 228 8480</div>
-</div>
-
-
-</fieldset>
-</form>
-
+<!-- CV PAGE -->
+<section id="cv" class="page">
+  <div class="skills-section">
+    <h2>My CV</h2>
+    <p style="max-width:700px; margin:0 auto;">
+      Add your education, experience, certifications, and achievements here.
+    </p>
+  </div>
 </section>
 
+<!-- WORK PAGE -->
+<section id="work" class="page">
+  <div class="skills-section">
+    <h2>My Work</h2>
+    <p style="max-width:700px; margin:0 auto;">
+      Showcase your projects here.
+    </p>
+  </div>
+</section>
+
+<!-- CONTACT PAGE -->
+<section id="contact" class="page">
+  <div class="contact-section">
+    <form>
+      <fieldset>
+        <legend>Contact Me</legend>
+
+        <label>Full Name</label>
+        <input type="text" required>
+
+        <label>Email Address</label>
+        <input type="text" required>
+
+        <label>Message</label>
+        <textarea rows="3"></textarea>
+
+        <input type="submit" value="Submit">
+      </fieldset>
+    </form>
+  </div>
+</section>
 
 <div class="footer">
-    © 2026 WebPortfolio
+  © 2026 WebPortfolio
 </div>
+
+<!-- JAVASCRIPT -->
+<script>
+function showPage(pageId, element) {
+
+  // Hide all pages
+  document.querySelectorAll('.page').forEach(page => {
+    page.classList.remove('active');
+  });
+
+  // Show selected page
+  document.getElementById(pageId).classList.add('active');
+
+  // Remove active from all nav links
+  document.querySelectorAll('.nav-link').forEach(link => {
+    link.classList.remove('active');
+  });
+
+  // Add active to clicked nav
+  element.classList.add('active');
+}
+</script>
 
 </body>
 </html>
