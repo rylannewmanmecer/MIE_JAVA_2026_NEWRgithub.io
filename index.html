@@ -3,41 +3,232 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Portfolio Website</title>
 
 <style>
-
-
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
+/* ========== RESET ========== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
   font-family: Arial, Helvetica, sans-serif;
 }
 
-body{
-  background:#0d1117;
-  color:#fff;
+body {
+  background: #0d1117;
+  color: #fff;
 }
-/* PAGE SYSTEM */
+
+/* ========== PAGE SYSTEM ========== */
 .page {
   display: none;
 }
-
 .page.active {
   display: block;
 }
+
+/* ========== HEADER ========== */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 10%;
+  background: #161b22;
+  position: relative;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #58a6ff;
+  text-decoration: none;
+}
+
+/* ========== NAVIGATION ========== */
+nav a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: #fff;
+  transition: .3s;
+}
+
+nav a:hover,
+nav a.active {
+  color: #58a6ff;
+}
+
+/* Hamburger */
 .menu-toggle {
   display: none;
   background: none;
   border: none;
   font-size: 28px;
-  color: white;
+  color: #fff;
   cursor: pointer;
 }
 
-/* MOBILE */
+/* ========== SOCIAL ICONS ========== */
+.social-icons {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.social-icons a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 15px;
+  transition: .3s;
+}
+
+.social-icons a:hover {
+  color: #58a6ff;
+}
+
+/* ========== HOME ========== */
+.home {
+  max-width: 1200px;
+  margin: 0 auto;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  padding: 40px;
+}
+
+.home-img img {
+  width: 280px;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid #58a6ff;
+}
+
+.home-content h1 {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+.home-content span {
+  color: #58a6ff;
+}
+
+.home-content p {
+  max-width: 500px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+/* Button */
+.btn {
+  display: inline-block;
+  padding: 10px 25px;
+  background: #58a6ff;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: .3s;
+}
+
+.btn:hover {
+  background: #1f6feb;
+}
+
+/* ========== SKILLS ========== */
+.skills-section {
+  text-align: center;
+  padding: 60px 10%;
+}
+
+.skills-section h2 {
+  font-size: 32px;
+  margin-bottom: 25px;
+}
+
+.cells {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.cell {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 18px;
+  background: #161b22;
+  border: 1px solid #30363d;
+  border-radius: 8px;
+  transition: .3s;
+}
+
+.cell img {
+  width: 24px;
+}
+
+.cell:hover {
+  border-color: #21a2bb;
+  transform: translateY(-3px);
+}
+
+/* ========== CONTACT ========== */
+.contact-section {
+  display: flex;
+  justify-content: center;
+  padding: 60px 10%;
+}
+
+.contact-section form {
+  width: 340px;
+  background: #161b22;
+  border: 1px solid #30363d;
+  padding: 25px;
+  border-radius: 10px;
+}
+
+fieldset {
+  border: none;
+}
+
+legend {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+label {
+  font-size: 14px;
+  color: #c9d1d9;
+}
+
+input, textarea {
+  width: 100%;
+  margin: 5px 0 15px;
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #30363d;
+  background: #0d1117;
+  color: #fff;
+}
+
+input[type="submit"] {
+  background: #58a6ff;
+  border: none;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background: #1f6feb;
+}
+
+/* ========== FOOTER ========== */
+.footer {
+  text-align: center;
+  padding: 20px;
+  background: #0d1117;
+}
+
+/* ========== MOBILE ========== */
 @media (max-width: 768px) {
 
   .menu-toggle {
@@ -56,289 +247,30 @@ body{
     width: 160px;
   }
 
+  nav.show {
+    display: flex;
+  }
+
   nav a {
     padding: 12px;
     margin: 0;
     border-bottom: 1px solid #30363d;
   }
 
-  nav.show {
-    display: flex;
-  }
-}
-.home {
-  max-width: 1200px;
-  margin: 0 auto;
-}
-.social-icons {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-}
-
-/* link styling */
-.social-icons a {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  color: #fff;
-  text-decoration: none; /* removes underline */
-  font-size: 15px;
-  transition: .3s;
-}
-.cells{
-  display:flex;
-  justify-content:center;
-  flex-wrap:wrap;
-  gap:15px;
-}
-
-.cell{
-  display:flex;
-  align-items:center;
-  gap:10px;
-  padding:10px 18px;
-  background:#161b22;
-  border:1px solid #30363d;
-  border-radius:8px;
-  transition:.3s;
-}
-
-.cell img{
-  width:24px;
-}
-
-.cell:hover{
-  border-color:#21a2bb;
-  transform:translateY(-3px);
-}
-header{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  padding:20px 10%;
-  background:#161b22;
-}
-
-.logo{
-  font-size:24px;
-  font-weight:bold;
-  color:#58a6ff;
-  text-decoration:none;
-}
-
-nav a{
-  margin-left:20px;
-  text-decoration:none;
-  color:#fff;
-  transition:.3s;
-}
-
-nav a:hover,
-nav a.active{
-  color:#58a6ff;
-}
-
-
-@media (max-width: 768px) {
-
   .home {
     flex-direction: column;
     text-align: center;
-  }
-
-  .home-content h1 {
-    font-size: 28px;
   }
 
   .home-img img {
     width: 220px;
     height: 220px;
   }
-}
 
-.home-content span{
-  color:#58a6ff;
-}
-
-.home-content h3{
-  margin-bottom:15px;
-}
-
-.home-content p{
-  max-width:500px;
-  line-height:1.6;
-  margin-bottom:20px;
-}
-
-.social-icons {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-}
-
-/* link styling */
-.social-icons a {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  color: #fff;
-  text-decoration: none; /* removes underline */
-  font-size: 15px;
-  transition: .3s;
-}
-
-/* icon size */
-.social-icons i {
-  font-size: 18px;
-}
-
-/* hover effect */
-.social-icons a:hover {
-  color: #58a6ff;
-}
-
-/* BUTTON */
-.btn{
-  display:inline-block;
-  margin-top:20px;
-  padding:10px 25px;
-  background:#58a6ff;
-  color:#fff;
-  text-decoration:none;
-  border-radius:6px;
-  transition:.3s;
-}
-
-.btn:hover{
-  background:#1f6feb;
-
-}
-
-
-.skills-section{
-  text-align:center;
-  padding:60px 10%;
-}
-.footer {
-    background-color: #0d1117;
-    color: white;
-    padding: 20px;
-    text-align: center;
-}
-
-.skills-section h2{
-  font-size:32px;
-  margin-bottom:25px;
-}
-
-.cells{
-  display:flex;
-  justify-content:center;
-  flex-wrap:wrap;
-  gap:15px;
-}
-
-.cell{
-  display:flex;
-  align-items:center;
-  gap:10px;
-  padding:10px 18px;
-  background:#161b22;
-  border:1px solid #30363d;
-  border-radius:8px;
-  transition:.3s;
-}
-
-.cell img{
-  width:24px;
-}
-
-.cell:hover{
-  border-color:#21a2bb;
-  transform:translateY(-3px);
-}
-
-/* ========= CONTACT ========= */
-.contact-section{
-  display:flex;
-  justify-content:center;
-  padding:60px 10%;
-}
-
-.contact-section form{
-  width:340px;
-  background:#161b22;
-  border:1px solid #30363d;
-  padding:25px;
-  border-radius:10px;
-}
-
-fieldset{
-  border:none;
-}
-
-legend{
-  font-weight:bold;
-  margin-bottom:10px;
-}
-
-label{
-  font-size:14px;
-  color:#c9d1d9;
-}
-
-input, textarea{
-  width:100%;
-  margin-top:5px;
-  margin-bottom:15px;
-  padding:8px;
-  border-radius:5px;
-  border:1px solid #30363d;
-  background:#0d1117;
-  color:#fff;
-}
-
-input[type="submit"]{
-  background:#58a6ff;
-  border:none;
-  cursor:pointer;
-  transition:.3s;
-}
-
-input[type="submit"]:hover{
-  background:#1f6feb;
-}
-
-/* CONTACT INFO */
-.contact-info{
-  margin-top:15px;
-}
-
-.contact-item{
-  display:flex;
-  align-items:center;
-  gap:10px;
-  margin-bottom:8px;
-  color:#c9d1d9;
-}
-
-.contact-item img{
-  width:20px;
-}
-
-@media(max-width:768px){
-
-  .home{
-    text-align:center;
+  .home-content h1 {
+    font-size: 28px;
   }
-
-  nav{
-    display:none;
-  }
-
 }
-
 </style>
 </head>
 
@@ -348,14 +280,12 @@ input[type="submit"]:hover{
   <a href="#" class="logo">Rylan Newman</a>
 
   <div class="social-icons">
-    <a href="https://www.linkedin.com/in/rylan-newman-55a857331/" target="_blank">
-      LinkedIn
-    </a>
-    <a href="https://github.com/dashboard" target="_blank">
-      GitHub
-    </a>
+    <a href="https://www.linkedin.com/in/rylan-newman-55a857331/" target="_blank">LinkedIn</a>
+    <a href="https://github.com/dashboard" target="_blank">GitHub</a>
   </div>
-<button class="menu-toggle" onclick="toggleMenu()">☰</button>
+
+  <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+
   <nav>
     <a href="#" class="nav-link active" onclick="showPage('home', this)">Home</a>
     <a href="#" class="nav-link" onclick="showPage('cv', this)">CV</a>
@@ -364,7 +294,7 @@ input[type="submit"]:hover{
   </nav>
 </header>
 
-<!-- HOME PAGE -->
+<!-- HOME -->
 <section id="home" class="page active">
   <div class="home">
     <div class="home-img">
@@ -374,15 +304,16 @@ input[type="submit"]:hover{
     <div class="home-content">
       <h1>Hi, It's <span>Rylan</span></h1>
       <p>I am a software developer specializing in building reliable, scalable, and user-focused digital solutions...</p>
-      <a href="#" onclick="showPage('contact', document.querySelectorAll('.nav-link')[3])" class="btn">Contact me</a>
-     
+      <a href="#" class="btn" onclick="showPage('contact', document.querySelectorAll('.nav-link')[3])">Contact me</a>
     </div>
   </div>
 </section>
- <section class="skills-section">
+
+<!-- SKILLS -->
+<section class="skills-section">
   <h2>Skills</h2>
   <div class="cells">
-    <div class="cell"><img src="images.html-5.png">HTML</div>
+    <div class="cell"><img src="images/html-5.png">HTML</div>
     <div class="cell"><img src="images/css.png">CSS</div>
     <div class="cell"><img src="images/js.jpg">JavaScript</div>
     <div class="cell"><img src="images/node.webp">Node.js</div>
@@ -390,27 +321,27 @@ input[type="submit"]:hover{
   </div>
 </section>
 
-<!-- CV PAGE -->
+<!-- CV -->
 <section id="cv" class="page">
   <div class="skills-section">
     <h2>My CV</h2>
-    <p style="max-width:700px; margin:0 auto;">
+    <p style="max-width:700px; margin:auto;">
       Add your education, experience, certifications, and achievements here.
     </p>
   </div>
 </section>
 
-<!-- WORK PAGE -->
+<!-- WORK -->
 <section id="work" class="page">
   <div class="skills-section">
     <h2>My Work</h2>
-    <p style="max-width:700px; margin:0 auto;">
+    <p style="max-width:700px; margin:auto;">
       Showcase your projects here.
     </p>
   </div>
 </section>
 
-<!-- CONTACT PAGE -->
+<!-- CONTACT -->
 <section id="contact" class="page">
   <div class="contact-section">
     <form>
@@ -421,7 +352,7 @@ input[type="submit"]:hover{
         <input type="text" required>
 
         <label>Email Address</label>
-        <input type="text" required>
+        <input type="email" required>
 
         <label>Message</label>
         <textarea rows="3"></textarea>
@@ -432,35 +363,21 @@ input[type="submit"]:hover{
   </div>
 </section>
 
-<div class="footer">
-  © 2026 WebPortfolio
-</div>
+<div class="footer">© 2026 WebPortfolio</div>
 
-<!-- JAVASCRIPT -->
 <script>
 function showPage(pageId, element) {
-
-  // Hide all pages
-  document.querySelectorAll('.page').forEach(page => {
-    page.classList.remove('active');
-  });
-
-  // Show selected page
+  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
   document.getElementById(pageId).classList.add('active');
 
-  // Remove active from all nav links
-  document.querySelectorAll('.nav-link').forEach(link => {
-    link.classList.remove('active');
-  });
-
-  // Add active to clicked nav
+  document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active'));
   element.classList.add('active');
 }
-</script>
-<script>
+
 function toggleMenu() {
   document.querySelector("nav").classList.toggle("show");
 }
 </script>
+
 </body>
 </html>
