@@ -170,6 +170,20 @@ input[type="submit"]{
 
 <header>
   <a class="logo">Rylan Newman</a>
+   <div class="social-icons">
+
+  <a href="https://www.linkedin.com/in/rylan-newman-55a857331/" target="_blank">
+    <i class="fa-brands fa-linkedin"></i>
+    <span>LinkedIn</span>
+  </a>
+
+  <a href="https://github.com/dashboard" target="_blank">
+    <i class="fa-brands fa-github"></i>
+    <span>GitHub</span>
+  </a>
+
+</div>
+
    <nav>
     <a href="#" class="nav-link active" onclick="showPage('home', this)">Home</a>
     <a href="#" class="nav-link" onclick="showPage('cv', this)">CV</a>
@@ -192,25 +206,29 @@ input[type="submit"]{
       </p>
       <a class="btn" onclick="showPage('contact', document.querySelectorAll('.nav-link')[3])">Contact Me</a>
     </div>
+    <section class="skills-section">
+  <h2>Skills</h2>
+  <div class="cells">
+    <div class="cell"><img src="images/html-5.png">HTML</div>
+    <div class="cell"><img src="images/css.png">CSS</div>
+    <div class="cell"><img src="images/js.jpg">JavaScript</div>
+    <div class="cell"><img src="images/node.webp">Node.js</div>
+    <div class="cell"><img src="images/reactlogo.webp">React.js</div>
+  </div>
+</section>
   </div>
 </section>
 
 <!-- CV -->
 <section id="cv" class="page section">
   <h2>My CV</h2>
-  <p>Add your education, experience, and achievements here.</p>
+  <p>still coming.</p>
 </section>
 
 <!-- WORK -->
 <section id="work" class="page section">
   <h2>My Work</h2>
-  <div class="skills">
-    <div class="skill">HTML</div>
-    <div class="skill">CSS</div>
-    <div class="skill">JavaScript</div>
-    <div class="skill">React</div>
-    <div class="skill">Node.js</div>
-  </div>
+  
 </section>
 
 <!-- CONTACT -->
@@ -225,7 +243,7 @@ input[type="submit"]{
 </section>
 
 <div class="footer">
-  © 2026 WebPortfolio
+  © 2026 
 </div>
 
 <script>
