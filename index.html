@@ -28,7 +28,44 @@ body{
 .page.active {
   display: block;
 }
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 28px;
+  color: white;
+  cursor: pointer;
+}
 
+/* MOBILE */
+@media (max-width: 768px) {
+
+  .menu-toggle {
+    display: block;
+  }
+
+  nav {
+    position: absolute;
+    top: 70px;
+    right: 10%;
+    background: #161b22;
+    border: 1px solid #30363d;
+    border-radius: 8px;
+    display: none;
+    flex-direction: column;
+    width: 160px;
+  }
+
+  nav a {
+    padding: 12px;
+    margin: 0;
+    border-bottom: 1px solid #30363d;
+  }
+
+  nav.show {
+    display: flex;
+  }
+}
 
 .social-icons {
   display: flex;
@@ -100,26 +137,21 @@ nav a.active{
 }
 
 
-.home {
-  display: flex;
-  align-items: center;        
-  justify-content: center;    
-  gap: 50px;                  
-  min-height: 100vh;          
-  padding: 40px;
-}
+@media (max-width: 768px) {
 
+  .home {
+    flex-direction: column;
+    gap: 25px;
+    padding: 20px;
+  }
 
-.home-img img{
-  max-width:300px;
-  width:100%;
-  border-radius:50%;
-  border:4px solid #58a6ff;
-}
+  .home-content h1 {
+    font-size: 28px;
+  }
 
-.home-content h1{
-  font-size:40px;
-  margin-bottom:10px;
+  .home-img img {
+    max-width: 220px;
+  }
 }
 
 .home-content span{
@@ -320,7 +352,7 @@ input[type="submit"]:hover{
       GitHub
     </a>
   </div>
-
+<button class="menu-toggle" onclick="toggleMenu()">☰</button>
   <nav>
     <a href="#" class="nav-link active" onclick="showPage('home', this)">Home</a>
     <a href="#" class="nav-link" onclick="showPage('cv', this)">CV</a>
@@ -421,6 +453,10 @@ function showPage(pageId, element) {
   element.classList.add('active');
 }
 </script>
-
+<script>
+function toggleMenu() {
+  document.querySelector("nav").classList.toggle("show");
+}
+</script>
 </body>
 </html>
