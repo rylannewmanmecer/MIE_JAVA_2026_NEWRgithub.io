@@ -17,6 +17,32 @@ body{
   background:#0d1117;
   color:#fff;
 }
+.cells{
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:15px;
+}
+
+.cell{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  padding:10px 18px;
+  background:#161b22;
+  border:1px solid #30363d;
+  border-radius:8px;
+  transition:.3s;
+}
+
+.cell img{
+  width:24px;
+}
+
+.cell:hover{
+  border-color:#21a2bb;
+  transform:translateY(-3px);
+}
 
 /* PAGE SYSTEM */
 .page{
@@ -205,15 +231,15 @@ input[type="submit"]{
         I enjoy turning ideas into practical digital experiences.
       </p>
       <a class="btn" onclick="showPage('contact', document.querySelectorAll('.nav-link')[3])">Contact Me</a>
+</p>
 
-      <h1>Who am I</h1>
+ <h2>Who am I</h2>
       <p>
         As a graduate with a Bachelor of Computer and Information Sciences in Application Development from Varsity College,
         I am eager to begin my career in information technology and apply the knowledge and skills I have gained during my academic journey.
 
 Throughout my studies, I developed a strong foundation in areas such as software development, network administration, database management, and cybersecurity. 
 I am proficient in programming languages such as Java, Python, and SQL, and I have experience working with cloud services and version control systems through both coursework and personal projects.
-      </p>
     </div>
     <section class="skills-section">
   <h2>Skills</h2>
