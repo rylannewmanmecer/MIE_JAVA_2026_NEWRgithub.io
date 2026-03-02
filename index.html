@@ -17,6 +17,139 @@ body{
   background:#0d1117;
   color:#fff;
 }
+/* PAGE SYSTEM */
+.page {
+  display: none;
+}
+
+.page.active {
+  display: block;
+}
+
+
+header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:20px 10%;
+  background:#161b22;
+}
+
+.logo{
+  font-size:24px;
+  font-weight:bold;
+  color:#58a6ff;
+  text-decoration:none;
+}
+
+nav a{
+  margin-left:20px;
+  text-decoration:none;
+  color:#fff;
+  transition:.3s;
+}
+
+nav a:hover,
+nav a.active{
+  color:#58a6ff;
+}
+
+
+.home{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:50px;
+  padding:60px 10%;
+  flex-wrap:wrap;
+}
+
+.home-img img{
+  width:280px;
+  border-radius:50%;
+  border:4px solid #58a6ff;
+}
+
+.home-content h1{
+  font-size:40px;
+  margin-bottom:10px;
+}
+
+.home-content span{
+  color:#58a6ff;
+}
+
+.home-content h3{
+  margin-bottom:15px;
+}
+
+.home-content p{
+  max-width:500px;
+  line-height:1.6;
+  margin-bottom:20px;
+}
+
+.social-icons {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/* link styling */
+.social-icons a {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #fff;
+  text-decoration: none; /* removes underline */
+  font-size: 15px;
+  transition: .3s;
+}
+
+/* icon size */
+.social-icons i {
+  font-size: 18px;
+}
+
+/* hover effect */
+.social-icons a:hover {
+  color: #58a6ff;
+}
+
+/* BUTTON */
+.btn{
+  display:inline-block;
+  margin-top:20px;
+  padding:10px 25px;
+  background:#58a6ff;
+  color:#fff;
+  text-decoration:none;
+  border-radius:6px;
+  transition:.3s;
+}
+
+.btn:hover{
+  background:#1f6feb;
+
+}
+
+
+.skills-section{
+  text-align:center;
+  padding:60px 10%;
+}
+.footer {
+    background-color: #0d1117;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.skills-section h2{
+  font-size:32px;
+  margin-bottom:25px;
+}
+
 .cells{
   display:flex;
   justify-content:center;
@@ -44,150 +177,84 @@ body{
   transform:translateY(-3px);
 }
 
-/* PAGE SYSTEM */
-.page{
-  display:none;
-}
-.page.active{
-  display:block;
-}
-
-/* HEADER */
-header{
+/* ========= CONTACT ========= */
+.contact-section{
   display:flex;
-  justify-content:space-between;
-  align-items:center;
-  padding:20px 10%;
-  background:#161b22;
-}
-
-.logo{
-  font-size:24px;
-  font-weight:bold;
-  color:#58a6ff;
-  text-decoration:none;
-}
-
-nav a{
-  margin-left:20px;
-  text-decoration:none;
-  color:#fff;
-  transition:.3s;
-  cursor:pointer;
-}
-nav a.active,
-nav a:hover{
-  color:#58a6ff;
-}
-
-/* HOME */
-.home{
-  display:flex;
-  align-items:center;
   justify-content:center;
-  gap:50px;
   padding:60px 10%;
-  flex-wrap:wrap;
 }
 
-.home-img img{
-  width:280px;
-  border-radius:50%;
-  border:4px solid #58a6ff;
+.contact-section form{
+  width:340px;
+  background:#161b22;
+  border:1px solid #30363d;
+  padding:25px;
+  border-radius:10px;
 }
 
-.home-content{
-  max-width:500px;
+fieldset{
+  border:none;
 }
 
-.home-content h1{
-  font-size:40px;
+legend{
+  font-weight:bold;
   margin-bottom:10px;
 }
 
-.home-content span{
-  color:#58a6ff;
-}
-
-.home-content p{
-  line-height:1.6;
-  margin-bottom:20px;
-}
-
-/* BUTTON */
-.btn{
-  display:inline-block;
-  padding:10px 25px;
-  background:#58a6ff;
-  color:#fff;
-  text-decoration:none;
-  border-radius:6px;
-}
-.btn:hover{
-  background:#1f6feb;
-}
-
-/* SECTIONS */
-.section{
-  padding:60px 10%;
-  text-align:center;
-}
-
-.skills{
-  display:flex;
-  justify-content:center;
-  gap:15px;
-  flex-wrap:wrap;
-}
-
-.skill{
-  background:#161b22;
-  border:1px solid #30363d;
-  padding:10px 18px;
-  border-radius:8px;
-}
-
-/* CONTACT */
-.contact-form{
-  max-width:350px;
-  margin:0 auto;
-  background:#161b22;
-  padding:25px;
-  border-radius:10px;
-  border:1px solid #30363d;
+label{
+  font-size:14px;
+  color:#c9d1d9;
 }
 
 input, textarea{
   width:100%;
+  margin-top:5px;
   margin-bottom:15px;
   padding:8px;
-  background:#0d1117;
-  border:1px solid #30363d;
-  color:#fff;
   border-radius:5px;
+  border:1px solid #30363d;
+  background:#0d1117;
+  color:#fff;
 }
 
 input[type="submit"]{
   background:#58a6ff;
   border:none;
   cursor:pointer;
+  transition:.3s;
 }
 
-/* FOOTER */
-.footer{
-  text-align:center;
-  padding:20px;
-  color:#aaa;
+input[type="submit"]:hover{
+  background:#1f6feb;
 }
 
-/* MOBILE */
+/* CONTACT INFO */
+.contact-info{
+  margin-top:15px;
+}
+
+.contact-item{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  margin-bottom:8px;
+  color:#c9d1d9;
+}
+
+.contact-item img{
+  width:20px;
+}
+
 @media(max-width:768px){
-  nav{
-    display:none;
-  }
+
   .home{
     text-align:center;
   }
+
+  nav{
+    display:none;
+  }
+
 }
 </style>
 </head>
@@ -233,14 +300,15 @@ input[type="submit"]{
       <a class="btn" onclick="showPage('contact', document.querySelectorAll('.nav-link')[3])">Contact Me</a>
 </p>
 
- <h2>Who am I</h2>
+ 
+    </div>
+    <h2>Who am I</h2>
       <p>
         As a graduate with a Bachelor of Computer and Information Sciences in Application Development from Varsity College,
         I am eager to begin my career in information technology and apply the knowledge and skills I have gained during my academic journey.
 
 Throughout my studies, I developed a strong foundation in areas such as software development, network administration, database management, and cybersecurity. 
 I am proficient in programming languages such as Java, Python, and SQL, and I have experience working with cloud services and version control systems through both coursework and personal projects.
-    </div>
     <section class="skills-section">
   <h2>Skills</h2>
   <div class="cells">
