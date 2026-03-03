@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Portfolio Website</title>
@@ -232,71 +233,61 @@ nav a.active{
 }
 
 /* ========= CONTACT ========= */
-.contact-section{
-  display:flex;
-  justify-content:center;
-  padding:60px 10%;
+.contact-container{
+  max-width: 600px;
+  margin: 80px auto;
+  padding: 0 20px;
+  text-align: center;
 }
 
-.contact-section form{
-  width:150px;
+.contact-container h1{
+  margin-bottom: 10px;
+}
+
+.contact-subtitle{
+  color:#c9d1d9;
+  margin-bottom: 30px;
+  font-size: 15px;
+}
+
+.contact-form{
   background:#161b22;
   border:1px solid #30363d;
-  padding:25px;
-  border-radius:10px;
+  padding:30px;
+  border-radius:12px;
 }
 
-fieldset{
-  border:none;
+.form-group{
+  text-align:left;
+  margin-bottom:20px;
 }
 
-legend{
-  font-weight:bold;
-  margin-bottom:10px;
-}
-
-label{
+.form-group label{
+  display:block;
+  margin-bottom:6px;
   font-size:14px;
   color:#c9d1d9;
 }
 
-input, textarea{
+.form-group input,
+.form-group textarea{
   width:100%;
-  margin-top:5px;
-  margin-bottom:15px;
-  padding:8px;
-  border-radius:5px;
+  padding:10px;
+  border-radius:6px;
   border:1px solid #30363d;
   background:#0d1117;
   color:#fff;
 }
 
-input[type="submit"]{
-  background:#58a6ff;
-  border:none;
-  cursor:pointer;
-  transition:.3s;
+.form-group input:focus,
+.form-group textarea:focus{
+  outline:none;
+  border-color:#58a6ff;
 }
 
-input[type="submit"]:hover{
-  background:#1f6feb;
-}
-
-/* CONTACT INFO */
-.contact-info{
-  margin-top:15px;
-}
-
-.contact-item{
-  display:flex;
-  align-items:center;
-  gap:10px;
-  margin-bottom:8px;
-  color:#c9d1d9;
-}
-
-.contact-item img{
-  width:20px;
+.contact-form .btn{
+  width:100%;
+  margin-top:10px;
 }
 /* CV SECTION */
 #cv {
@@ -565,16 +556,43 @@ input[type="submit"]:hover{
 </section>
 
 <!-- CONTACT -->
-<section id="contact" class="page section">
-  <h1>Contact Me</h1>
-  <form class="contact-form">
-    <input type="text" placeholder="Full Name" required>
-    <input type="email" placeholder="Email Address" required>
-    <textarea rows="4" placeholder="Your Message"></textarea>
-    <input type="submit" value="Send Message">
-  </form>
-</section>
+<section id="contact" class="page">
+  <div class="contact-container">
+    <h1>Contact Me</h1>
+    <p class="contact-subtitle">
+      Feel free to reach out for collaborations, opportunities, or questions.
+    </p>
+<div class="contact-icons">
+  <a href="mailto:rylannewman10@gmail.com">
+    <i class="fa-solid fa-envelope"></i>
+    <span>Email</span>
+  </a>
 
+  <a href="https://wa.me/+27 66 228 8480" target="_blank">
+    <i class="fa-brands fa-whatsapp"></i>
+    <span>WhatsApp</span>
+  </a>
+</div>
+    <form class="contact-form">
+      <div class="form-group">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" placeholder="Your name" required>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email Address</label>
+        <input type="email" id="email" placeholder="your@email.com" required>
+      </div>
+
+      <div class="form-group">
+        <label for="message">Message</label>
+        <textarea id="message" rows="5" placeholder="Your message..." required></textarea>
+      </div>
+
+      <button type="submit" class="btn">Send Message</button>
+    </form>
+  </div>
+</section>
 <div class="footer">
   © 2026 
 </div>
