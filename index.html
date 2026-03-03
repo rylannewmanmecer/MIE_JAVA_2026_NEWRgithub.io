@@ -237,6 +237,7 @@ nav a.active{
   flex-direction: column;
   gap: 6px;
   cursor: pointer;
+  z-index: 1100;
 }
 
 .hamburger span {
@@ -244,7 +245,20 @@ nav a.active{
   height: 3px;
   background: #fff;
   border-radius: 2px;
-  transition: 0.3s;
+  transition: all 0.35s ease;
+}
+
+/* ANIMATED STATE (X) */
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
 }
 
 /* MOBILE NAV */
@@ -442,7 +456,7 @@ nav a.active{
 
 </div>
 <!-- HAMBURGER -->
-<div class="hamburger" onclick="toggleMenu()">
+<div class="hamburger" id="hamburger" onclick="toggleMenu()">
   <span></span>
   <span></span>
   <span></span>
@@ -657,11 +671,16 @@ function showPage(pageId, element){
 </script>
 <script>
 function toggleMenu() {
-  document.getElementById("mobileNav").classList.toggle("show");
+  const nav = document.getElementById("mobileNav");
+  const burger = document.getElementById("hamburger");
+
+  nav.classList.toggle("show");
+  burger.classList.toggle("active");
 }
 
 function closeMenu() {
   document.getElementById("mobileNav").classList.remove("show");
+  document.getElementById("hamburger").classList.remove("active");
 }
 </script>
 </body>
