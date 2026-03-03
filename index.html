@@ -32,8 +32,10 @@ header{
   display:flex;
   justify-content:space-between;
   align-items:center;
-  padding:20px 10%;
+  padding:16px 6%;
   background:#161b22;
+  gap: 15px;
+  min-height: 64px;
 }
 
 .logo{
@@ -264,29 +266,30 @@ nav a.active{
 /* MOBILE NAV */
 @media (max-width: 768px) {
 
-  .hamburger {
-    display: flex;
+  /* Smaller header padding */
+  header {
+    padding: 12px 5%;
   }
 
-  nav {
-    position: absolute;
-    top: 75px;
-    right: 10%;
-    background: #161b22;
-    border: 1px solid #30363d;
-    border-radius: 10px;
-    flex-direction: column;
-    width: 180px;
-    padding: 15px;
+  /* Logo smaller */
+  .logo {
+    font-size: 18px;
+    white-space: nowrap;
+  }
+
+  /* Social icons tighter */
+  .social-icons {
+    gap: 12px;
+  }
+
+  /* Hide text labels, keep icons */
+  .social-icons span {
     display: none;
   }
 
-  nav a {
-    margin: 10px 0;
-  }
-
-  nav.show {
-    display: flex;
+  /* Slightly smaller icons */
+  .social-icons i {
+    font-size: 16px;
   }
 }
 /* ========= CONTACT ========= */
