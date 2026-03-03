@@ -231,7 +231,50 @@ nav a.active{
   border-color:#21a2bb;
   transform:translateY(-3px);
 }
+/* ===== HAMBURGER MENU ===== */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 6px;
+  cursor: pointer;
+}
 
+.hamburger span {
+  width: 26px;
+  height: 3px;
+  background: #fff;
+  border-radius: 2px;
+  transition: 0.3s;
+}
+
+/* MOBILE NAV */
+@media (max-width: 768px) {
+
+  .hamburger {
+    display: flex;
+  }
+
+  nav {
+    position: absolute;
+    top: 75px;
+    right: 10%;
+    background: #161b22;
+    border: 1px solid #30363d;
+    border-radius: 10px;
+    flex-direction: column;
+    width: 180px;
+    padding: 15px;
+    display: none;
+  }
+
+  nav a {
+    margin: 10px 0;
+  }
+
+  nav.show {
+    display: flex;
+  }
+}
 /* ========= CONTACT ========= */
 .contact-container{
   max-width: 600px;
@@ -398,13 +441,18 @@ nav a.active{
   </a>
 
 </div>
-
-   <nav>
-    <a href="#" class="nav-link active" onclick="showPage('home', this)">Home</a>
-    <a href="#" class="nav-link" onclick="showPage('cv', this)">CV</a>
-    <a href="#" class="nav-link" onclick="showPage('work', this)">My Work</a>
-    <a href="#" class="nav-link" onclick="showPage('contact', this)">Contact</a>
-  </nav>
+<!-- HAMBURGER -->
+<div class="hamburger" onclick="toggleMenu()">
+  <span></span>
+  <span></span>
+  <span></span>
+</div>
+  <nav id="mobileNav">
+  <a href="#" class="nav-link active" onclick="showPage('home', this); closeMenu()">Home</a>
+  <a href="#" class="nav-link" onclick="showPage('cv', this); closeMenu()">CV</a>
+  <a href="#" class="nav-link" onclick="showPage('work', this); closeMenu()">My Work</a>
+  <a href="#" class="nav-link" onclick="showPage('contact', this); closeMenu()">Contact</a>
+</nav>
 </header>
 
 <!-- HOME -->
@@ -572,6 +620,7 @@ nav a.active{
     <i class="fa-brands fa-whatsapp"></i>
     <span>WhatsApp</span>
   </a>
+  
 </div>
     <form class="contact-form">
       <div class="form-group">
@@ -606,6 +655,14 @@ function showPage(pageId, element){
   element.classList.add('active');
 }
 </script>
+<script>
+function toggleMenu() {
+  document.getElementById("mobileNav").classList.toggle("show");
+}
 
+function closeMenu() {
+  document.getElementById("mobileNav").classList.remove("show");
+}
+</script>
 </body>
 </html>
