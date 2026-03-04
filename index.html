@@ -191,9 +191,36 @@ background:#1f6feb;
 .cv-actions {
   display: flex;
   justify-content: center;
-  gap: 20px; /* controls spacing */
-  flex-wrap: wrap; /* stacks nicely on mobile */
+  gap: 16px;               /* 🔥 separation between buttons */
+  margin-top: 25px;
+  flex-wrap: wrap;
 }
+
+/* Make buttons visually separate */
+.cv-actions .download-btn,
+.cv-actions button {
+  min-width: 180px;
+  text-align: center;
+  border-radius: 10px;
+}
+/* Download = primary */
+.download-btn {
+  background: #238636;
+}
+
+.download-btn:hover {
+  background: #2ea043;
+}
+
+/* View = secondary */
+.cv-actions button {
+  background: #1f6feb;
+}
+
+.cv-actions button:hover {
+  background: #388bfd;
+}
+
 .skills-section{
 text-align:center;
 padding:60px 10%;
@@ -528,12 +555,12 @@ font-size: 0.95rem;
 
 <a href="https://www.linkedin.com/in/rylan-newman-55a857331/" target="_blank">
 <i class="fa-brands fa-linkedin"></i>
-<span>LinkedIn</span>
+<span></span>
 </a>
 
 <a href="https://github.com/rylannewmanmecer" target="_blank">
 <i class="fa-brands fa-github"></i>
-<span>GitHub</span>
+<span></span>
 </a>
 
 </div>
