@@ -376,7 +376,7 @@ color: #c9d1d9;
 font-size: 1.05rem;
 }
 
-/* BUTTON */
+/* BUTTONS */
 .download-btn {
 display: inline-block;
 padding: 14px 28px;
@@ -391,6 +391,21 @@ transition: transform 0.2s ease, background 0.2s ease;
 .download-btn:hover {
 background: #2ea043;
 transform: translateY(-2px);
+}
+.view-btn {
+display: inline-block;
+padding: 14px 28px;
+background: #238636;
+color: #fff;
+text-decoration: none;
+border-radius: 8px;
+font-weight: bold;
+transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.view-btn:hover {
+background: #2ea043;
+transform: translateX(4px);
 }
 
 /* HIGHLIGHTS GRID */
@@ -625,10 +640,13 @@ React, Node.js, Firebase, Git, Linux
 </p>
 </div>
 <div class="highlight-card">
-<h3>💻 Technical Skills</h3>
+<h3>💻 Work Experience</h3>
 <p>
-Java, Python, SQL, HTML, CSS, JavaScript,<br>
-React, Node.js, Firebase, Git, Linux
+Mecer Inter-Ed 
+Java Programme<br>
+
+Freelance Java/Application developer
+EcoPlus(Startup-Cleaning Products & Services)
 </p>
 </div>
 <header class="cv-header">
@@ -636,7 +654,9 @@ React, Node.js, Firebase, Git, Linux
 <a href="./Rylan_Newman_Cv.pdf" download="Rylan_Newman_CV.pdf" class="download-btn">
 Download Full CV
 </a>
-<a href="#" class="download-btn" onclick="openCV()">View CV</a>
+<a href="javascript:void(0)" class="download-btn" onclick="openCV()">
+  View CV
+</a>
 </header>
 
 </div>
