@@ -188,7 +188,12 @@ background:#1f6feb;
 
 }
 
-
+.cv-actions {
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* controls spacing */
+  flex-wrap: wrap; /* stacks nicely on mobile */
+}
 .skills-section{
 text-align:center;
 padding:60px 10%;
@@ -650,13 +655,15 @@ EcoPlus(Startup-Cleaning Products & Services)
 </p>
 </div>
 <header class="cv-header">
+  <div class="cv-actions">
+    <a href="./Rylan_Newman_Cv.pdf" download="Rylan_Newman_CV.pdf" class="download-btn">
+      Download Full CV
+    </a>
 
-<a href="./Rylan_Newman_Cv.pdf" download="Rylan_Newman_CV.pdf" class="download-btn">
-Download Full CV
-</a>
-<a href="javascript:void(0)" class="download-btn" onclick="openCV()">
-  View CV
-</a>
+    <button type="button" class="download-btn" onclick="openCV()">
+      View CV
+    </button>
+  </div>
 </header>
 
 </div>
