@@ -424,6 +424,67 @@ color: #c9d1d9;
 line-height: 1.6;
 font-size: 0.95rem;
 }
+/* ===== CV MODAL VIEWER ===== */
+.cv-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.75);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+}
+
+.cv-modal.active {
+  display: flex;
+}
+
+.cv-modal-content {
+  background: #0d1117;
+  width: 90%;
+  max-width: 900px;
+  height: 85vh;
+  border-radius: 14px;
+  border: 1px solid #30363d;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.cv-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  background: #161b22;
+  border-bottom: 1px solid #30363d;
+}
+
+.cv-modal-header h3 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.cv-close {
+  cursor: pointer;
+  font-size: 20px;
+  color: #fff;
+}
+
+.cv-close:hover {
+  color: #58a6ff;
+}
+
+.cv-modal-body {
+  flex: 1;
+  overflow-y: auto;
+}
+
+.cv-modal-body iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
 
 /* @media(max-width:768px){
 
@@ -563,11 +624,19 @@ Java, Python, SQL, HTML, CSS, JavaScript,<br>
 React, Node.js, Firebase, Git, Linux
 </p>
 </div>
+<div class="highlight-card">
+<h3>💻 Technical Skills</h3>
+<p>
+Java, Python, SQL, HTML, CSS, JavaScript,<br>
+React, Node.js, Firebase, Git, Linux
+</p>
+</div>
 <header class="cv-header">
 
 <a href="./Rylan_Newman_Cv.pdf" download="Rylan_Newman_CV.pdf" class="download-btn">
 Download Full CV
 </a>
+<a href="#" class="download-btn" onclick="openCV()">View CV</a>
 </header>
 
 </div>
@@ -677,7 +746,7 @@ function toggleMenu() {
   const nav = document.getElementById("mobileNav");
   const burger = document.getElementById("hamburger");
 
-  
+
   burger.classList.toggle("active");
 }
 
@@ -686,5 +755,27 @@ document.getElementById("mobileNav").classList.remove("show");
   document.getElementById("hamburger").classList.remove("active");
 }
 </script>
+<script>
+function openCV() {
+  document.getElementById("cvModal").classList.add("active");
+}
+
+function closeCV() {
+  document.getElementById("cvModal").classList.remove("active");
+}
+</script>
+<!-- CV MODAL -->
+<div class="cv-modal" id="cvModal">
+  <div class="cv-modal-content">
+    <div class="cv-modal-header">
+      <h3>Rylan Newman – Full CV</h3>
+      <span class="cv-close" onclick="closeCV()">✕</span>
+    </div>
+
+    <div class="cv-modal-body">
+      <iframe src="./Rylan_Newman_Cv.pdf"></iframe>
+    </div>
+  </div>
+</div>
 </body>
 
