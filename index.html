@@ -1,252 +1,251 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Portfolio Website</title>
 
 <style>
 *{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-  font-family: Arial, Helvetica, sans-serif;
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family: Arial, Helvetica, sans-serif;
 }
 
 body{
-  background:#0d1117;
-  color:#fff;
+background:#0d1117;
+color:#fff;
 }
 /* PAGE SYSTEM */
 .page {
-  display: none;
+display: none;
 }
 
 .page.active {
-  display: block;
+display: block;
 }
 
 
 header{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  padding:16px 6%;
-  background:#161b22;
-  gap: 15px;
-  min-height: 64px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 10%;
+background:#161b22;
 }
 
 .logo{
-  font-size:24px;
-  font-weight:bold;
-  color:#58a6ff;
-  text-decoration:none;
+font-size:24px;
+font-weight:bold;
+color:#58a6ff;
+text-decoration:none;
 }
 
 nav a{
-  margin-left:20px;
-  text-decoration:none;
-  color:#fff;
-  transition:.3s;
+margin-left:20px;
+text-decoration:none;
+color:#fff;
+transition:.3s;
 }
 
 nav a:hover,
 nav a.active{
-  color:#58a6ff;
+color:#58a6ff;
 }
 /* ========= WORK SECTION ========= */
 
 .work-container{
-  padding:60px 10%;
-  display:flex;
-  flex-direction:column;
-  gap:40px;
+padding:60px 10%;
+display:flex;
+flex-direction:column;
+gap:40px;
 }
 
 .project-card{
-  display:flex;
-  flex-wrap:wrap;
-  background:#161b22;
-  border:1px solid #30363d;
-  border-radius:12px;
-  overflow:hidden;
-  transition:.3s;
+display:flex;
+flex-wrap:wrap;
+background:#161b22;
+border:1px solid #30363d;
+border-radius:12px;
+overflow:hidden;
+transition:.3s;
 }
 
 .project-card:hover{
-  transform:translateY(-5px);
-  border-color:#58a6ff;
+transform:translateY(-5px);
+border-color:#58a6ff;
 }
 
 .project-image{
-  flex:1 1 300px;
+flex:1 1 300px;
 }
 
 .project-image img{
-  width:100%;
-  height:100%;
-  object-fit:cover;
+width:100%;
+height:100%;
+object-fit:cover;
 }
 
 .project-content{
-  flex:1 1 300px;
-  padding:25px;
+flex:1 1 300px;
+padding:25px;
 }
 
 .project-content h2{
-  margin-bottom:15px;
-  color:#58a6ff;
+margin-bottom:15px;
+color:#58a6ff;
 }
 
 .project-content p{
-  margin-bottom:20px;
-  line-height:1.6;
-  color:#c9d1d9;
+margin-bottom:20px;
+line-height:1.6;
+color:#c9d1d9;
 }
 
 .project-links{
-  display:flex;
-  gap:15px;
-  flex-wrap:wrap;
+display:flex;
+gap:15px;
+flex-wrap:wrap;
 }
 
 .home{
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  gap:50px;
-  padding:60px 10%;
-  flex-wrap:wrap;
+display:flex;
+align-items:center;
+justify-content:center;
+gap:50px;
+padding:60px 10%;
+flex-wrap:wrap;
 }
 
 .home-img img{
-  width:280px;
-  border-radius:50%;
-  border:4px solid #58a6ff;
+width:280px;
+border-radius:50%;
+border:4px solid #58a6ff;
 }
 
 .home-content h1{
-  font-size:40px;
-  margin-bottom:10px;
+font-size:40px;
+margin-bottom:10px;
 }
 
 .home-content span{
-  color:#58a6ff;
+color:#58a6ff;
 }
 
 .home-content h3{
-  margin-bottom:15px;
+margin-bottom:15px;
 }
 
 .home-content p{
-  max-width:500px;
-  line-height:1.6;
-  margin-bottom:20px;
+max-width:500px;
+line-height:1.6;
+margin-bottom:20px;
 }
 
 .social-icons {
-  display: flex;
-  align-items: center;
-  gap: 20px;
+display: flex;
+align-items: center;
+gap: 20px;
 }
 
 /* link styling */
 .social-icons a {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  color: #fff;
-  text-decoration: none; /* removes underline */
-  font-size: 15px;
-  transition: .3s;
+display: flex;
+align-items: center;
+gap: 6px;
+color: #fff;
+text-decoration: none; /* removes underline */
+font-size: 15px;
+transition: .3s;
 }
 
 /* icon size */
 .social-icons i {
-  font-size: 18px;
+font-size: 18px;
 }
 
 /* hover effect */
 .social-icons a:hover {
-  color: #58a6ff;
+color: #58a6ff;
 }
 
 /* BUTTON */
 .btn{
-  display:inline-block;
-  margin-top:20px;
-  padding:10px 25px;
-  background:#58a6ff;
-  color:#fff;
-  text-decoration:none;
-  border-radius:6px;
-  transition:.3s;
+display:inline-block;
+margin-top:20px;
+padding:10px 25px;
+background:#58a6ff;
+color:#fff;
+text-decoration:none;
+border-radius:6px;
+transition:.3s;
 }
 
 .btn:hover{
-  background:#1f6feb;
+background:#1f6feb;
 
 }
 
 
 .skills-section{
-  text-align:center;
-  padding:60px 10%;
+text-align:center;
+padding:60px 10%;
 }
 .footer {
-    background-color: #0d1117;
-    color: white;
-    padding: 20px;
-    text-align: center;
+background-color: #0d1117;
+color: white;
+padding: 20px;
+text-align: center;
 }
 
 .skills-section h2{
-  font-size:32px;
-  margin-bottom:25px;
+font-size:32px;
+margin-bottom:25px;
 }
 
 .cells{
-  display:flex;
-  justify-content:center;
-  flex-wrap:wrap;
-  gap:15px;
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:15px;
 }
 
 .cell{
-  display:flex;
-  align-items:center;
-  gap:10px;
-  padding:10px 18px;
-  background:#161b22;
-  border:1px solid #30363d;
-  border-radius:8px;
-  transition:.3s;
+display:flex;
+align-items:center;
+gap:10px;
+padding:10px 18px;
+background:#161b22;
+border:1px solid #30363d;
+border-radius:8px;
+transition:.3s;
 }
 
 .cell img{
-  width:24px;
+width:24px;
 }
 
 .cell:hover{
-  border-color:#21a2bb;
-  transform:translateY(-3px);
+border-color:#21a2bb;
+transform:translateY(-3px);
 }
 /* ===== HAMBURGER MENU ===== */
 .hamburger {
-  display: none;
-  flex-direction: column;
-  gap: 6px;
-  cursor: pointer;
+display: none;
+flex-direction: column;
+gap: 6px;
+cursor: pointer;
   z-index: 1100;
 }
 
 .hamburger span {
-  width: 26px;
-  height: 3px;
-  background: #fff;
-  border-radius: 2px;
+width: 26px;
+height: 3px;
+background: #fff;
+border-radius: 2px;
+  transition: 0.3s;
   transition: all 0.35s ease;
 }
 
@@ -266,176 +265,175 @@ nav a.active{
 /* MOBILE NAV */
 @media (max-width: 768px) {
 
-  /* Smaller header padding */
-  header {
-    padding: 12px 5%;
-  }
+.hamburger {
+display: flex;
+}
 
-  /* Logo smaller */
-  .logo {
-    font-size: 18px;
-    white-space: nowrap;
-  }
+nav {
+position: absolute;
+top: 75px;
+right: 10%;
+background: #161b22;
+border: 1px solid #30363d;
+border-radius: 10px;
+flex-direction: column;
+width: 180px;
+padding: 15px;
+display: none;
+}
 
-  /* Social icons tighter */
-  .social-icons {
-    gap: 12px;
-  }
+nav a {
+margin: 10px 0;
+}
 
-  /* Hide text labels, keep icons */
-  .social-icons span {
-    display: none;
-  }
-
-  /* Slightly smaller icons */
-  .social-icons i {
-    font-size: 16px;
-  }
+nav.show {
+display: flex;
+}
 }
 /* ========= CONTACT ========= */
 .contact-container{
-  max-width: 600px;
-  margin: 80px auto;
-  padding: 0 20px;
-  text-align: center;
+max-width: 600px;
+margin: 80px auto;
+padding: 0 20px;
+text-align: center;
 }
 
 .contact-container h1{
-  margin-bottom: 10px;
+margin-bottom: 10px;
 }
 
 .contact-subtitle{
-  color:#c9d1d9;
-  margin-bottom: 30px;
-  font-size: 15px;
+color:#c9d1d9;
+margin-bottom: 30px;
+font-size: 15px;
 }
 
 .contact-form{
-  background:#161b22;
-  border:1px solid #30363d;
-  padding:30px;
-  border-radius:12px;
+background:#161b22;
+border:1px solid #30363d;
+padding:30px;
+border-radius:12px;
 }
 
 .form-group{
-  text-align:left;
-  margin-bottom:20px;
+text-align:left;
+margin-bottom:20px;
 }
 
 .form-group label{
-  display:block;
-  margin-bottom:6px;
-  font-size:14px;
-  color:#c9d1d9;
+display:block;
+margin-bottom:6px;
+font-size:14px;
+color:#c9d1d9;
 }
 
 .form-group input,
 .form-group textarea{
-  width:100%;
-  padding:10px;
-  border-radius:6px;
-  border:1px solid #30363d;
-  background:#0d1117;
-  color:#fff;
+width:100%;
+padding:10px;
+border-radius:6px;
+border:1px solid #30363d;
+background:#0d1117;
+color:#fff;
 }
 
 .form-group input:focus,
 .form-group textarea:focus{
-  outline:none;
-  border-color:#58a6ff;
+outline:none;
+border-color:#58a6ff;
 }
 
 .contact-form .btn{
-  width:100%;
-  margin-top:10px;
+width:100%;
+margin-top:10px;
 }
 /* CV SECTION */
 #cv {
-  padding: 80px 20px;
+padding: 80px 20px;
 }
 
 .cv-container {
-  max-width: 1100px;
-  margin: 0 auto;
+max-width: 1100px;
+margin: 0 auto;
 }
 
 /* HEADER */
 .cv-header {
-  text-align: center;
-  margin-bottom: 60px;
+text-align: center;
+margin-bottom: 60px;
 }
 
 .cv-header h1 {
-  font-size: 3rem;
-  margin-bottom: 15px;
+font-size: 3rem;
+margin-bottom: 15px;
 }
 
 .cv-intro {
-  max-width: 700px;
-  margin: 0 auto 30px;
-  line-height: 1.6;
-  color: #c9d1d9;
-  font-size: 1.05rem;
+max-width: 700px;
+margin: 0 auto 30px;
+line-height: 1.6;
+color: #c9d1d9;
+font-size: 1.05rem;
 }
 
 /* BUTTON */
 .download-btn {
-  display: inline-block;
-  padding: 14px 28px;
-  background: #238636;
-  color: #fff;
-  text-decoration: none;
-  border-radius: 8px;
-  font-weight: bold;
-  transition: transform 0.2s ease, background 0.2s ease;
+display: inline-block;
+padding: 14px 28px;
+background: #238636;
+color: #fff;
+text-decoration: none;
+border-radius: 8px;
+font-weight: bold;
+transition: transform 0.2s ease, background 0.2s ease;
 }
 
 .download-btn:hover {
-  background: #2ea043;
-  transform: translateY(-2px);
+background: #2ea043;
+transform: translateY(-2px);
 }
 
 /* HIGHLIGHTS GRID */
 .cv-highlights {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 25px;
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+gap: 25px;
 }
 
 /* CARDS */
 .highlight-card {
-  background: #161b22;
-  padding: 25px;
-  border-radius: 14px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+background: #161b22;
+padding: 25px;
+border-radius: 14px;
+box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 .highlight-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.45);
+transform: translateY(-6px);
+box-shadow: 0 14px 30px rgba(0, 0, 0, 0.45);
 }
 
 .highlight-card h3 {
-  margin-bottom: 12px;
-  font-size: 1.25rem;
+margin-bottom: 12px;
+font-size: 1.25rem;
 }
 
 .highlight-card p {
-  color: #c9d1d9;
-  line-height: 1.6;
-  font-size: 0.95rem;
+color: #c9d1d9;
+line-height: 1.6;
+font-size: 0.95rem;
 }
 
 /* @media(max-width:768px){
 
-  .home{
-    text-align:center;
-  }
+ .home{
+   text-align:center;
+ }
 
-  nav{
-    display:none;
-  }
+ nav{
+   display:none;
+ }
 
 } */
 </style>
@@ -444,236 +442,238 @@ nav a.active{
 <body>
 
 <header>
-  <a class="logo">Rylan Newman</a>
-   <div class="social-icons">
+<a class="logo">Rylan Newman</a>
+<div class="social-icons">
 
-  <a href="https://www.linkedin.com/in/rylan-newman-55a857331/" target="_blank">
-    <i class="fa-brands fa-linkedin"></i>
-    <span>LinkedIn</span>
-  </a>
+<a href="https://www.linkedin.com/in/rylan-newman-55a857331/" target="_blank">
+<i class="fa-brands fa-linkedin"></i>
+<span>LinkedIn</span>
+</a>
 
-  <a href="https://github.com/rylannewmanmecer" target="_blank">
-    <i class="fa-brands fa-github"></i>
-    <span>GitHub</span>
-  </a>
+<a href="https://github.com/rylannewmanmecer" target="_blank">
+<i class="fa-brands fa-github"></i>
+<span>GitHub</span>
+</a>
 
 </div>
 <!-- HAMBURGER -->
+<div class="hamburger" onclick="toggleMenu()">
 <div class="hamburger" id="hamburger" onclick="toggleMenu()">
-  <span></span>
-  <span></span>
-  <span></span>
+<span></span>
+<span></span>
+<span></span>
 </div>
-  <nav id="mobileNav">
-  <a href="#" class="nav-link active" onclick="showPage('home', this); closeMenu()">Home</a>
-  <a href="#" class="nav-link" onclick="showPage('cv', this); closeMenu()">CV</a>
-  <a href="#" class="nav-link" onclick="showPage('work', this); closeMenu()">My Work</a>
-  <a href="#" class="nav-link" onclick="showPage('contact', this); closeMenu()">Contact</a>
+<nav id="mobileNav">
+<a href="#" class="nav-link active" onclick="showPage('home', this); closeMenu()">Home</a>
+<a href="#" class="nav-link" onclick="showPage('cv', this); closeMenu()">CV</a>
+<a href="#" class="nav-link" onclick="showPage('work', this); closeMenu()">My Work</a>
+<a href="#" class="nav-link" onclick="showPage('contact', this); closeMenu()">Contact</a>
 </nav>
 </header>
 
 <!-- HOME -->
 <section id="home" class="page active">
-  <div class="home">
-    <div class="home-content">
-      <h1>Hi, I'm <span>Rylan Newman</span></h1>
-      <p>
-        Software developer specializing in clean, scalable, and user-focused solutions.
-        I enjoy turning ideas into practical digital experiences.
-      </p>
-      <a class="btn" onclick="showPage('contact', document.querySelectorAll('.nav-link')[3])">
-        Contact Me
-      </a>
-    </div>
-  </div>
+<div class="home">
+<div class="home-content">
+<h1>Hi, I'm <span>Rylan Newman</span></h1>
+<p>
+Software developer specializing in clean, scalable, and user-focused solutions.
+I enjoy turning ideas into practical digital experiences.
+</p>
+<a class="btn" onclick="showPage('contact', document.querySelectorAll('.nav-link')[3])">
+Contact Me
+</a>
+</div>
+</div>
 
- 
-    </div>
-   
-   <section class="skills-section">
-  <h2>Technical Skills</h2>
 
-  <!-- Programming Languages -->
-  <h3 style="margin-top:30px; color:#58a6ff;">Programming Languages</h3>
-  <div class="cells">
-    <div class="cell">Java</div>
-    <div class="cell">Python</div>
-    <div class="cell">JavaScript</div>
-    <div class="cell">SQL</div>
-  </div>
+</div>
 
-  <!-- Web Development -->
-  <h3 style="margin-top:30px; color:#58a6ff;">Web Development</h3>
-  <div class="cells">
-    <div class="cell">HTML5</div>
-    <div class="cell">CSS3</div>
-    <div class="cell">React.js</div>
-    <div class="cell">Node.js</div>
-  </div>
+<section class="skills-section">
+<h2>Technical Skills</h2>
 
-  <!-- Databases -->
-  <h3 style="margin-top:30px; color:#58a6ff;">Databases</h3>
-  <div class="cells">
-    <div class="cell">MySQL</div>
-    <div class="cell">MongoDB</div>
-  </div>
+<!-- Programming Languages -->
+<h3 style="margin-top:30px; color:#58a6ff;">Programming Languages</h3>
+<div class="cells">
+<div class="cell">Java</div>
+<div class="cell">Python</div>
+<div class="cell">JavaScript</div>
+<div class="cell">SQL</div>
+</div>
 
-  <!-- Tools & Platforms -->
-  <h3 style="margin-top:30px; color:#58a6ff;">Tools & Platforms</h3>
-  <div class="cells">
-    <div class="cell">Git</div>
-    <div class="cell">GitHub</div>
-    <div class="cell">Firebase</div>
-    <div class="cell">Linux</div>
-  </div>
+<!-- Web Development -->
+<h3 style="margin-top:30px; color:#58a6ff;">Web Development</h3>
+<div class="cells">
+<div class="cell">HTML5</div>
+<div class="cell">CSS3</div>
+<div class="cell">React.js</div>
+<div class="cell">Node.js</div>
+</div>
 
-  <!-- IT Foundations -->
-  <h3 style="margin-top:30px; color:#58a6ff;">IT Foundations</h3>
-  <div class="cells">
-    <div class="cell">Network Administration</div>
-    <div class="cell">Cybersecurity Fundamentals</div>
-    <div class="cell">Database Management</div>
-    <div class="cell">Software Development Principles</div>
-  </div>
+<!-- Databases -->
+<h3 style="margin-top:30px; color:#58a6ff;">Databases</h3>
+<div class="cells">
+<div class="cell">MySQL</div>
+<div class="cell">MongoDB</div>
+</div>
+
+<!-- Tools & Platforms -->
+<h3 style="margin-top:30px; color:#58a6ff;">Tools & Platforms</h3>
+<div class="cells">
+<div class="cell">Git</div>
+<div class="cell">GitHub</div>
+<div class="cell">Firebase</div>
+<div class="cell">Linux</div>
+</div>
+
+<!-- IT Foundations -->
+<h3 style="margin-top:30px; color:#58a6ff;">IT Foundations</h3>
+<div class="cells">
+<div class="cell">Network Administration</div>
+<div class="cell">Cybersecurity Fundamentals</div>
+<div class="cell">Database Management</div>
+<div class="cell">Software Development Principles</div>
+</div>
 
 </section>
-  </div>
+</div>
 </section>
 
 <!-- CV -->
 <section id="cv" class="page">
-  <div class="cv-container">
+<div class="cv-container">
 
-    
 
-    <!-- HIGHLIGHTS -->
-    <div class="cv-highlights">
 
-      <div class="highlight-card">
-        <h3>🎓 Education</h3>
-        <p>
-          Bachelor of Computer and Information Sciences<br>
-          Application Development (2022–2024)
-        </p>
-      </div>
+<!-- HIGHLIGHTS -->
+<div class="cv-highlights">
 
-      <div class="highlight-card">
-        <h3>💻 Technical Skills</h3>
-        <p>
-          Java, Python, SQL, HTML, CSS, JavaScript,<br>
-          React, Node.js, Firebase, Git, Linux
-        </p>
-      </div>
+<div class="highlight-card">
+<h3>🎓 Education</h3>
+<p>
+Bachelor of Computer and Information Sciences<br>
+Application Development (2022–2024)
+</p>
+</div>
+
+<div class="highlight-card">
+<h3>💻 Technical Skills</h3>
+<p>
+Java, Python, SQL, HTML, CSS, JavaScript,<br>
+React, Node.js, Firebase, Git, Linux
+</p>
+</div>
 <header class="cv-header">
-    
-      <a href="./Rylan_Newman_Cv.pdf" download="Rylan_Newman_CV.pdf" class="download-btn">
-        Download Full CV
-      </a>
-    </header>
-      
-    </div>
-  </div>
+
+<a href="./Rylan_Newman_Cv.pdf" download="Rylan_Newman_CV.pdf" class="download-btn">
+Download Full CV
+</a>
+</header>
+
+</div>
+</div>
 </section>
 
 <!-- WORK -->
 <section id="work" class="page section">
-  <h1 style="text-align:center; margin-top:40px;">My Work</h1>
+<h1 style="text-align:center; margin-top:40px;">My Work</h1>
 
-  <div class="work-container">
+<div class="work-container">
 
-    <!-- Project 1 -->
-    <div class="project-card">
-      <div class="project-image">
-        <img src="images/1000088013.jpg" alt="Project 1 Screenshot">
-      </div>
-      <div class="project-content">
-        <h2>Project Title One</h2>
-        <p>
-          Spritual healing in communities
-        </p>
+<!-- Project 1 -->
+<div class="project-card">
+<div class="project-image">
+<img src="images/1000088013.jpg" alt="Project 1 Screenshot">
+</div>
+<div class="project-content">
+<h2>Project Title One</h2>
+<p>
+Spritual healing in communities
+</p>
 
-        <div class="project-links">
-          <a href="#" target="_blank" class="btn">Live Demo</a>
-          <a href="#" target="_blank" class="btn">Source Code</a>
-        </div>
-      </div>
-    </div>
+<div class="project-links">
+<a href="#" target="_blank" class="btn">Live Demo</a>
+<a href="#" target="_blank" class="btn">Source Code</a>
+</div>
+</div>
+</div>
 
-    <!-- Project 2 -->
-    <div class="project-card">
-      <div class="project-image">
-        <img src="images/dtech.jpg" alt="Project 2 Screenshot">
-      </div>
-      <div class="project-content">
-        <h2>Project Title Two</h2>
-        <p>
-          Drone delivery application with live updates.
-        </p>
+<!-- Project 2 -->
+<div class="project-card">
+<div class="project-image">
+<img src="images/dtech.jpg" alt="Project 2 Screenshot">
+</div>
+<div class="project-content">
+<h2>Project Title Two</h2>
+<p>
+Drone delivery application with live updates.
+</p>
 
-        <div class="project-links">
-          <a href="#" target="_blank" class="btn">Live Demo</a>
-          <a href="#" target="_blank" class="btn">Source Code</a>
-        </div>
-      </div>
-    </div>
+<div class="project-links">
+<a href="#" target="_blank" class="btn">Live Demo</a>
+<a href="#" target="_blank" class="btn">Source Code</a>
+</div>
+</div>
+</div>
 
-  </div>
+</div>
 </section>
 
 <!-- CONTACT -->
 <section id="contact" class="page">
-  <div class="contact-container">
-    <h1>Contact Me</h1>
-    <p class="contact-subtitle">
-      Feel free to reach out for collaborations, opportunities, or questions.
-    </p>
+<div class="contact-container">
+<h1>Contact Me</h1>
+<p class="contact-subtitle">
+Feel free to reach out for collaborations, opportunities, or questions.
+</p>
 <div class="contact-icons">
-  <a href="mailto:rylannewman10@gmail.com">
-    <i class="fa-solid fa-envelope"></i>
-    <span>Email</span>
-  </a>
+<a href="mailto:rylannewman10@gmail.com">
+<i class="fa-solid fa-envelope"></i>
+<span>Email</span>
+</a>
 
-  <a href="https://wa.me/+27 66 228 8480" target="_blank">
-    <i class="fa-brands fa-whatsapp"></i>
-    <span>WhatsApp</span>
-  </a>
-  
+<a href="https://wa.me/+27 66 228 8480" target="_blank">
+<i class="fa-brands fa-whatsapp"></i>
+<span>WhatsApp</span>
+</a>
+
 </div>
-    <form class="contact-form">
-      <div class="form-group">
-        <label for="name">Full Name</label>
-        <input type="text" id="name" placeholder="Your name" required>
-      </div>
+<form class="contact-form">
+<div class="form-group">
+<label for="name">Full Name</label>
+<input type="text" id="name" placeholder="Your name" required>
+</div>
 
-      <div class="form-group">
-        <label for="email">Email Address</label>
-        <input type="email" id="email" placeholder="your@email.com" required>
-      </div>
+<div class="form-group">
+<label for="email">Email Address</label>
+<input type="email" id="email" placeholder="your@email.com" required>
+</div>
 
-      <div class="form-group">
-        <label for="message">Message</label>
-        <textarea id="message" rows="5" placeholder="Your message..." required></textarea>
-      </div>
+<div class="form-group">
+<label for="message">Message</label>
+<textarea id="message" rows="5" placeholder="Your message..." required></textarea>
+</div>
 
-      <button type="submit" class="btn">Send Message</button>
-    </form>
-  </div>
+<button type="submit" class="btn">Send Message</button>
+</form>
+</div>
 </section>
 <div class="footer">
-  © 2026 
+© 2026 
 </div>
 
 <script>
 function showPage(pageId, element){
-  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
-  document.getElementById(pageId).classList.add('active');
+document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+document.getElementById(pageId).classList.add('active');
 
-  document.querySelectorAll('.nav-link').forEach(n => n.classList.remove('active'));
-  element.classList.add('active');
+document.querySelectorAll('.nav-link').forEach(n => n.classList.remove('active'));
+element.classList.add('active');
 }
 </script>
 <script>
 function toggleMenu() {
+  document.getElementById("mobileNav").classList.toggle("show");
   const nav = document.getElementById("mobileNav");
   const burger = document.getElementById("hamburger");
 
@@ -682,9 +682,9 @@ function toggleMenu() {
 }
 
 function closeMenu() {
-  document.getElementById("mobileNav").classList.remove("show");
+document.getElementById("mobileNav").classList.remove("show");
   document.getElementById("hamburger").classList.remove("active");
 }
 </script>
 </body>
-</html>
+
