@@ -706,17 +706,43 @@ height: 100%;
 border: none;
 }
 
-/* @media(max-width:768px){
-
-.home{
-  text-align:center;
+.about-container{
+max-width:900px;
+margin:auto;
+padding:60px 20px;
+text-align:center;
 }
 
-nav{
-  display:none;
+.about-container h1{
+font-size:40px;
+margin-bottom:30px;
 }
 
-} */
+.about-img{
+display:flex;
+justify-content:center;
+margin-bottom:30px;
+}
+
+.about-img img{
+width:220px;
+height:220px;
+border-radius:50%;
+object-fit:cover;
+border:4px solid #00bcd4;
+}
+
+.about-text{
+font-size:18px;
+line-height:1.7;
+color:#555;
+max-width:750px;
+margin:auto;
+}
+
+.about-text p{
+margin-bottom:20px;
+}
 </style>
 </head>
 
@@ -746,9 +772,11 @@ nav{
 </div>
 <nav id="mobileNav">
 <a href="#" class="nav-link active" onclick="showPage('home', this); closeMenu()">Home</a>
+<a href="#" class="nav-link" onclick="showPage('about', this); closeMenu()">About Me</a>
 <a href="#" class="nav-link" onclick="showPage('cv', this); closeMenu()">CV</a>
 <a href="#" class="nav-link" onclick="showPage('work', this); closeMenu()">My Work</a>
 <a href="#" class="nav-link" onclick="showPage('contact', this); closeMenu()">Contact</a>
+
 </nav>
 </header>
 <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
@@ -766,12 +794,61 @@ I enjoy turning ideas into practical digital experiences.
 <a class="btn" onclick="showPage('contact', document.querySelectorAll('.nav-link')[3])">
 Contact Me
 </a>
+<a class="btn" onclick="showPage('about', document.querySelectorAll('.nav-link')[1])">
+About Me
+</a>
 </div>
 </div>
 
+<!-- ABOUT PAGE -->
+<section id="about" class="page">
+  <div class="about-container">
 
-</div>
+    <h1>About Me</h1>
 
+    <!-- PROFILE IMAGE -->
+    <div class="about-img">
+      <img src="your-photo.jpg" alt="Rylan Newman">
+    </div>
+
+    <!-- ABOUT TEXT -->
+    <div class="about-text">
+      <p>
+        I am a Junior Java Developer based in Kempton Park, Gauteng, South Africa,
+        with a Bachelor’s degree in Computer and Information Sciences
+        (Application Development) from Varsity College.
+      </p>
+
+      <p>
+        My primary focus is Java development, where I have built applications
+        using object-oriented programming principles, backend logic, and
+        database integration. I have practical experience working with
+        technologies such as Java, Firebase, SQL databases, and cloud services
+        including Azure.
+      </p>
+
+      <p>
+        During my studies and freelance work, I developed Android applications
+        with backend-driven functionality, integrated authentication systems,
+        and worked with APIs and cloud-based databases. I also collaborated
+        directly with clients to design and deliver application solutions
+        tailored to their business needs.
+      </p>
+
+      <p>
+        I am passionate about building reliable backend systems, improving
+        application performance, and continuously expanding my knowledge of
+        enterprise Java technologies and modern development practices.
+      </p>
+
+      <p>
+        I am currently focused on growing as a software developer and
+        contributing to professional development teams where I can apply my
+        technical skills, problem-solving ability, and passion for building
+        quality software.
+      </p>
+    </div>
+  </div>
 <section class="skills-section">
 <h2>Technical Skills</h2>
 
@@ -821,6 +898,8 @@ Contact Me
 </section>
 </div>
 </section>
+</section>
+
 
 <!-- CV -->
 <section id="cv" class="page">
