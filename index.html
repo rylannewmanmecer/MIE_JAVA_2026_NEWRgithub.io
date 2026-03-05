@@ -34,7 +34,6 @@ justify-content:space-between;
 align-items:center;
 padding:20px 10%;
 background:#161b22;
-gap:20px;
 }
 
 .logo{
@@ -302,42 +301,32 @@ opacity: 0;
 transform: rotate(-45deg) translate(6px, -6px);
 }
 
-/* ===== MOBILE NAV ===== */
+/* MOBILE NAV */
 @media (max-width: 768px) {
 
-header{
-position:relative;
+.hamburger {
+display: flex;
 }
 
-.hamburger{
-display:flex;
+nav {
+position: absolute;
+top: 75px;
+right: 10%;
+background: #161b22;
+border: 1px solid #30363d;
+border-radius: 10px;
+flex-direction: column;
+width: 180px;
+padding: 15px;
+display: none;
 }
 
-.social-icons{
-display:none; /* hide icons on small screens */
+nav a {
+margin: 10px 0;
 }
 
-#mobileNav{
-position:absolute;
-top:70px;
-right:10%;
-background:#161b22;
-border:1px solid #30363d;
-border-radius:10px;
-flex-direction:column;
-width:200px;
-padding:20px;
-display:none;
-z-index:1000;
-}
-
-#mobileNav a{
-margin:10px 0;
-display:block;
-}
-
-#mobileNav.show{
-display:flex;
+nav.show {
+display: flex;
 }
 }
 /* ========= CONTACT ========= */
@@ -463,38 +452,38 @@ transform: translateX(4px);
 }
 /* ===== THEME TOGGLE BUTTON ===== */
 .theme-toggle {
-  background: transparent;
-  border: none;
-  color: #fff;
-  font-size: 18px;
-  cursor: pointer;
-  margin-left: 20px;
-  transition: color 0.3s, transform 0.2s;
+background: transparent;
+border: none;
+color: #fff;
+font-size: 18px;
+cursor: pointer;
+margin-left: 20px;
+transition: color 0.3s, transform 0.2s;
 }
 
 .theme-toggle:hover {
-  color: #58a6ff;
-  transform: rotate(15deg);
+color: #58a6ff;
+transform: rotate(15deg);
 }
 
 /* ===== LIGHT MODE ===== */
 body.light {
-  background: #f5f7fa;
-  color: #0d1117;
+background: #f5f7fa;
+color: #0d1117;
 }
 
 body.light header {
-  background: #ffffff;
-  border-bottom: 1px solid #ddd;
+background: #ffffff;
+border-bottom: 1px solid #ddd;
 }
 
 body.light nav a {
-  color: #0d1117;
+color: #0d1117;
 }
 
 body.light nav a.active,
 body.light nav a:hover {
-  color: #1f6feb;
+color: #1f6feb;
 }
 
 body.light .project-card,
@@ -502,63 +491,63 @@ body.light .cell,
 body.light .highlight-card,
 body.light .contact-form,
 body.light .cv-modal-content {
-  background: #ffffff;
-  border-color: #ddd;
+background: #ffffff;
+border-color: #ddd;
 }
 
 body.light p,
 body.light .contact-subtitle,
 body.light .cv-intro {
-  color: #333;
+color: #333;
 }
 
 body.light .theme-toggle {
-  color: #0d1117;
+color: #0d1117;
 }
 /* LIGHT MODE VISIBILITY FIXES*/
 
 /* General text */
 body.light {
-  background: #f5f7fa;
-  color: #0d1117;
+background: #f5f7fa;
+color: #0d1117;
 }
 
 /* Header & Nav */
 body.light header {
-  background: #ffffff;
-  border-bottom: 1px solid #e0e0e0;
+background: #ffffff;
+border-bottom: 1px solid #e0e0e0;
 }
 
 body.light nav {
-  background: #ffffff;
+background: #ffffff;
 }
 
 body.light nav a {
-  color: #0d1117;
+color: #0d1117;
 }
 
 body.light nav a.active,
 body.light nav a:hover {
-  color: #1f6feb;
+color: #1f6feb;
 }
 
 /* Logo */
 body.light .logo {
-  color: #1f6feb;
+color: #1f6feb;
 }
 
 /* Social icons (TOP + CONTACT) */
 body.light .social-icons a {
-  color: #0d1117;
+color: #0d1117;
 }
 
 body.light .social-icons a:hover {
-  color: #1f6feb;
+color: #1f6feb;
 }
 
 /* Hamburger icon */
 body.light .hamburger span {
-  background: #0d1117;
+background: #0d1117;
 }
 
 /* Cards / sections */
@@ -567,8 +556,8 @@ body.light .cell,
 body.light .highlight-card,
 body.light .contact-form,
 body.light .cv-modal-content {
-  background: #ffffff;
-  border-color: #ddd;
+background: #ffffff;
+border-color: #ddd;
 }
 
 /* Card text */
@@ -576,60 +565,60 @@ body.light .project-content p,
 body.light .highlight-card p,
 body.light .cv-intro,
 body.light .contact-subtitle {
-  color: #333;
+color: #333;
 }
 
 /* Section headings */
 body.light h1,
 body.light h2,
 body.light h3 {
-  color: #0d1117;
+color: #0d1117;
 }
 
 /* Accent titles */
 body.light .project-content h2,
 body.light h3[style*="#58a6ff"] {
-  color: #1f6feb !important;
+color: #1f6feb !important;
 }
 
 /* Skills cells text */
 body.light .cell {
-  color: #0d1117;
+color: #0d1117;
 }
 
 /* Inputs & textarea */
 body.light input,
 body.light textarea {
-  background: #ffffff;
-  color: #0d1117;
-  border: 1px solid #ccc;
+background: #ffffff;
+color: #0d1117;
+border: 1px solid #ccc;
 }
 
 body.light input::placeholder,
 body.light textarea::placeholder {
-  color: #777;
+color: #777;
 }
 
 /* Buttons */
 body.light .btn {
-  background: #1f6feb;
-  color: #fff;
+background: #1f6feb;
+color: #fff;
 }
 
 body.light .btn:hover {
-  background: #1557c0;
+background: #1557c0;
 }
 
 /* Footer */
 body.light .footer {
-  background: #ffffff;
-  color: #0d1117;
-  border-top: 1px solid #ddd;
+background: #ffffff;
+color: #0d1117;
+border-top: 1px solid #ddd;
 }
 
 /* Theme toggle button */
 body.light .theme-toggle {
-  color: #0d1117;
+color: #0d1117;
 }
 /* HIGHLIGHTS GRID */
 .cv-highlights {
@@ -767,40 +756,39 @@ margin-bottom:20px;
 <body>
 
 <header>
-
-<button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
-<i class="fa-solid fa-moon"></i>
-</button>
-
 <a class="logo">Rylan Newman</a>
-
 <div class="social-icons">
+
 <a href="https://www.linkedin.com/in/rylan-newman-55a857331/" target="_blank">
 <i class="fa-brands fa-linkedin"></i>
+<span></span>
 </a>
 
 <a href="https://github.com/rylannewmanmecer" target="_blank">
 <i class="fa-brands fa-github"></i>
+<span></span>
 </a>
-</div>
 
+</div>
 <!-- HAMBURGER -->
+
 <div class="hamburger" id="hamburger" onclick="toggleMenu()">
 <span></span>
 <span></span>
 <span></span>
 </div>
-
 <nav id="mobileNav">
 <a href="#" class="nav-link active" onclick="showPage('home', this); closeMenu()">Home</a>
 <a href="#" class="nav-link" onclick="showPage('about', this); closeMenu()">About Me</a>
 <a href="#" class="nav-link" onclick="showPage('cv', this); closeMenu()">CV</a>
 <a href="#" class="nav-link" onclick="showPage('work', this); closeMenu()">My Work</a>
 <a href="#" class="nav-link" onclick="showPage('contact', this); closeMenu()">Contact</a>
+
 </nav>
-
 </header>
-
+<button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+<i class="fa-solid fa-moon"></i>
+</button>
 <!-- HOME -->
 <section id="home" class="page active">
 <div class="home">
@@ -821,52 +809,52 @@ About Me
 </section>
 <!-- ABOUT PAGE -->
 <section id="about" class="page">
-  <div class="about-container">
+<div class="about-container">
 
 
-    <!-- PROFILE IMAGE -->
-    <div class="about-img">
-      <img src="images/1000088181.jpg" alt="Rylan Newman">
-    </div>
+<!-- PROFILE IMAGE -->
+<div class="about-img">
+<img src="images/1000088181.jpg" alt="Rylan Newman">
+</div>
 
-    <!-- ABOUT TEXT -->
-    <div class="about-text">
-      <p>
-        I am a Junior Java Developer based in Kempton Park, Gauteng, South Africa,
-        with a Bachelor’s degree in Computer and Information Sciences
-        (Application Development) from Varsity College.
-      </p>
+<!-- ABOUT TEXT -->
+<div class="about-text">
+<p>
+I am a Junior Java Developer based in Kempton Park, Gauteng, South Africa,
+with a Bachelor’s degree in Computer and Information Sciences
+(Application Development) from Varsity College.
+</p>
 
-      <p>
-        My primary focus is Java development, where I have built applications
-        using object-oriented programming principles, backend logic, and
-        database integration. I have practical experience working with
-        technologies such as Java, Firebase, SQL databases, and cloud services
-        including Azure.
-      </p>
+<p>
+My primary focus is Java development, where I have built applications
+using object-oriented programming principles, backend logic, and
+database integration. I have practical experience working with
+technologies such as Java, Firebase, SQL databases, and cloud services
+including Azure.
+</p>
 
-      <p>
-        During my studies and freelance work, I developed Android applications
-        with backend-driven functionality, integrated authentication systems,
-        and worked with APIs and cloud-based databases. I also collaborated
-        directly with clients to design and deliver application solutions
-        tailored to their business needs.
-      </p>
+<p>
+During my studies and freelance work, I developed Android applications
+with backend-driven functionality, integrated authentication systems,
+and worked with APIs and cloud-based databases. I also collaborated
+directly with clients to design and deliver application solutions
+tailored to their business needs.
+</p>
 
-      <p>
-        I am passionate about building reliable backend systems, improving
-        application performance, and continuously expanding my knowledge of
-        enterprise Java technologies and modern development practices.
-      </p>
+<p>
+I am passionate about building reliable backend systems, improving
+application performance, and continuously expanding my knowledge of
+enterprise Java technologies and modern development practices.
+</p>
 
-      <p>
-        I am currently focused on growing as a software developer and
-        contributing to professional development teams where I can apply my
-        technical skills, problem-solving ability, and passion for building
-        quality software.
-      </p>
-    </div>
-  </div>
+<p>
+I am currently focused on growing as a software developer and
+contributing to professional development teams where I can apply my
+technical skills, problem-solving ability, and passion for building
+quality software.
+</p>
+</div>
+</div>
 <section class="skills-section">
 <h2>Technical Skills</h2>
 
@@ -1066,19 +1054,17 @@ element.classList.add('active');
 </script>
 <script>
 function toggleMenu() {
+document.getElementById("mobileNav").classList.toggle("show");
 const nav = document.getElementById("mobileNav");
 const burger = document.getElementById("hamburger");
 
-nav.classList.toggle("show");
+
 burger.classList.toggle("active");
 }
 
 function closeMenu() {
-const nav = document.getElementById("mobileNav");
-const burger = document.getElementById("hamburger");
-
-nav.classList.remove("show");
-burger.classList.remove("active");
+document.getElementById("mobileNav").classList.remove("show");
+document.getElementById("hamburger").classList.remove("active");
 }
 </script>
 <script>
@@ -1097,58 +1083,58 @@ const icon = toggleBtn.querySelector("i");
 
 // Load saved theme
 if (localStorage.getItem("theme") === "light") {
-  document.body.classList.add("light");
-  icon.classList.replace("fa-moon", "fa-sun");
+document.body.classList.add("light");
+icon.classList.replace("fa-moon", "fa-sun");
 }
 
 toggleBtn.addEventListener("click", () => {
-  document.body.classList.toggle("light");
+document.body.classList.toggle("light");
 
-  const isLight = document.body.classList.contains("light");
-  icon.classList.toggle("fa-moon", !isLight);
-  icon.classList.toggle("fa-sun", isLight);
+const isLight = document.body.classList.contains("light");
+icon.classList.toggle("fa-moon", !isLight);
+icon.classList.toggle("fa-sun", isLight);
 
-  localStorage.setItem("theme", isLight ? "light" : "dark");
+localStorage.setItem("theme", isLight ? "light" : "dark");
 });
 </script>
 <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
 
 <script>
-  const firebaseConfig = {
-    apiKey: "YOUR_API_KEY",
-    authDomain: "YOUR_PROJECT.firebaseapp.com",
-    projectId: "YOUR_PROJECT_ID",
-    storageBucket: "YOUR_PROJECT.appspot.com",
-    messagingSenderId: "XXXX",
-    appId: "XXXX"
-  };
+const firebaseConfig = {
+apiKey: "YOUR_API_KEY",
+authDomain: "YOUR_PROJECT.firebaseapp.com",
+projectId: "YOUR_PROJECT_ID",
+storageBucket: "YOUR_PROJECT.appspot.com",
+messagingSenderId: "XXXX",
+appId: "XXXX"
+};
 
-  firebase.initializeApp(firebaseConfig);
-  const db = firebase.firestore();
+firebase.initializeApp(firebaseConfig);
+const db = firebase.firestore();
 </script>
 <script>
 document.getElementById("contactForm").addEventListener("submit", function(e) {
-  e.preventDefault();
+e.preventDefault();
 
-  const name = document.getElementById("name").value;
-  const email = document.getElementById("email").value;
-  const message = document.getElementById("message").value;
+const name = document.getElementById("name").value;
+const email = document.getElementById("email").value;
+const message = document.getElementById("message").value;
 
-  db.collection("contacts").add({
-    name: name,
-    email: email,
-    message: message,
-    createdAt: firebase.firestore.FieldValue.serverTimestamp()
-  })
-  .then(() => {
-    alert("Message sent successfully!");
-    document.getElementById("contactForm").reset();
-  })
-  .catch(error => {
-    alert("Error sending message");
-    console.error(error);
-  });
+db.collection("contacts").add({
+name: name,
+email: email,
+message: message,
+createdAt: firebase.firestore.FieldValue.serverTimestamp()
+})
+.then(() => {
+alert("Message sent successfully!");
+document.getElementById("contactForm").reset();
+})
+.catch(error => {
+alert("Error sending message");
+console.error(error);
+});
 });
 </script>
 <!-- CV viewer -->
